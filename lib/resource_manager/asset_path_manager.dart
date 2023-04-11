@@ -13,4 +13,5 @@ class AssetPathManager {
   static const String googleIconPng = "assets/images/google_icon.png";
   static const String facebookIcon = "assets/svg/facebook_icon.svg";
   static const String facebookIconPng = "assets/images/facebook_icon.png";
+  static const String welcomeScreenIconPng = "assets/images/welcome_screen_icon.png";
 }

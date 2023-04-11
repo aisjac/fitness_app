@@ -1,8 +1,10 @@
 import 'package:fitness_app/custom_widget/custom_gradient_button.dart';
 import 'package:fitness_app/custom_widget/custom_textfield.dart';
+import 'package:fitness_app/screen/welcome_screen/welcome_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../custom_widget/custom_button.dart';
@@ -17,7 +19,6 @@ class LogInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-
         child: Center(
           child: Container(
             height: MediaQuery.of(context).size.height,
@@ -35,8 +36,8 @@ class LogInScreen extends StatelessWidget {
                       const Text("Hey There,"),
                       const Text(
                         "Welcome Back",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         height: 20,
@@ -84,12 +85,16 @@ class LogInScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                          padding:
+                              const EdgeInsets.only(left: 30.0, right: 30.0),
                           child: CustomGradientButton(
-                              iconPath: AssetPathManager.loginPrefixButtonIconPng,
+                              iconPath:
+                                  AssetPathManager.loginPrefixButtonIconPng,
                               text: "Get Started",
                               textColor: Colors.white,
-                              onTap: () {}),
+                              onTap: () {
+                                Get.to(const WelcomeScreen());
+                              }),
                         ),
                       ),
                       const SizedBox(
@@ -107,7 +112,8 @@ class LogInScreen extends StatelessWidget {
                             padding: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Text(
                               "Or",
-                              style: TextStyle(fontSize: 15, color: Colors.black),
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.black),
                             ),
                           ),
                           Container(
@@ -134,7 +140,8 @@ class LogInScreen extends StatelessWidget {
                             height: 70.0,
                             child: Padding(
                               padding: const EdgeInsets.all(18.0),
-                              child: Image.asset(AssetPathManager.googleIconPng),
+                              child:
+                                  Image.asset(AssetPathManager.googleIconPng),
                             ),
                           ),
                           const SizedBox(
@@ -151,17 +158,23 @@ class LogInScreen extends StatelessWidget {
                             height: 70.0,
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Image.asset(AssetPathManager.facebookIconPng),
+                              child:
+                                  Image.asset(AssetPathManager.facebookIconPng),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                         Text("Don\'t have an account yet?"),
-                         Text(" Register",style: TextStyle(color: Colors.purple),),
+                          Text("Don\'t have an account yet?"),
+                          Text(
+                            " Register",
+                            style: TextStyle(color: Colors.purple),
+                          ),
                         ],
                       ),
                     ],
