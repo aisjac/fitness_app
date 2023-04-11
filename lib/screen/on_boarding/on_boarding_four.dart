@@ -1,7 +1,10 @@
+import 'package:fitness_app/screen/login/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
-import '../resource_manager/asset_path_manager.dart';
+import '../../resource_manager/asset_path_manager.dart';
 
 class OnBoardingFour extends StatelessWidget {
   const OnBoardingFour({Key? key}) : super(key: key);
@@ -9,6 +12,10 @@ class OnBoardingFour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () { Get.to(LogInScreen()); },
+        child: Text("Go"),
+      ),
       body: Column(
         children: [
           SizedBox(

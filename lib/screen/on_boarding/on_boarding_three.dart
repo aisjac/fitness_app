@@ -1,20 +1,18 @@
-import 'package:fitness_app/resource_manager/asset_path_manager.dart';
-import 'package:fitness_app/resource_manager/color_manager.dart';
-import 'package:fitness_app/screen/on_boarding_two.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import '../../resource_manager/asset_path_manager.dart';
+import 'on_boarding_four.dart';
 
-class OnBoardingOne extends StatelessWidget {
-  const OnBoardingOne({Key? key}) : super(key: key);
+class OnBoardingThree extends StatelessWidget {
+  const OnBoardingThree({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () { Get.to(OnBoardingTwo()); },
+        onPressed: () { Get.to(OnBoardingFour()); },
         child: Text("Go"),
       ),
       body: Column(
@@ -22,7 +20,7 @@ class OnBoardingOne extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height/1.75,
             width: MediaQuery.of(context).size.width,
-            child: Image.asset(AssetPathManager.boardingOneImgPng,fit: BoxFit.fill,),
+            child: Image.asset(AssetPathManager.boardingThreeImgPng,fit: BoxFit.fill,),
           ),
 
           Container(
@@ -31,10 +29,10 @@ class OnBoardingOne extends StatelessWidget {
             padding: EdgeInsets.only(left: 20.0,top: 50.0,right: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Track Your Goal",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+              children: const [
+                Text("Eat Well",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
                 SizedBox(height: 20,),
-                Text("Don\'t worry if you have trouble determining your goals, We can help you determine your goals and track your goals",style: TextStyle(fontSize: 14),),
+                Text("Let\'s start a healthy lifestyle with us, we can determine your diet every day. healthy eating is fun",style: TextStyle(fontSize: 14),),
               ],
             ),
           )

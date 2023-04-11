@@ -1,6 +1,6 @@
 import 'package:fitness_app/custom_widget/custom_button.dart';
 import 'package:fitness_app/resource_manager/color_manager.dart';
-import 'package:fitness_app/screen/on_boarding_one.dart';
+import 'package:fitness_app/screen/on_boarding/on_boarding_one.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
