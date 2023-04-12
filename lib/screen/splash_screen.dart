@@ -35,7 +35,7 @@ class SplashScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    SvgPicture.asset(AssetPathManager.appLogo),
+                    Image.asset(AssetPathManager.appLogoPng,scale: 3,),
                     const SizedBox(height: 15),
                     const Text("Everybody Can Train"),
                   ],
