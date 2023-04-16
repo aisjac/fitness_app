@@ -1,4 +1,5 @@
 import 'package:fitness_app/screen/login/login_screen.dart';
+import 'package:fitness_app/screen/signup/register_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class OnBoardingFour extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () { Get.to(LogInScreen()); },
+        onPressed: () { Get.to(const RegisterScreen()); },
         child: Text("Go"),
       ),
       body: Column(

@@ -48,7 +48,7 @@ class CompleteProfileScreen extends StatelessWidget {
                         enlargeCenterPage: true,
                         height: 300,
                         autoPlay: false,
-                        autoPlayInterval: Duration(seconds: 3),
+                        autoPlayInterval: const Duration(seconds: 3),
                         reverse: false,
                         aspectRatio: 5.0,
                       ),

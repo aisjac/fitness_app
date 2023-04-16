@@ -6,11 +6,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
   final String hintText;
+  final String? svgPrefix;
 
   const CustomTextField({
     Key? key,
     this.controller,
-    required this.hintText,
+    required this.hintText, this.svgPrefix,
   }) : super(key: key);
 
   @override
@@ -22,7 +23,7 @@ class CustomTextField extends StatelessWidget {
         filled: true,
         prefixIcon:  Padding(
           padding: const EdgeInsets.all(12.0),
-          child: SvgPicture.asset(AssetPathManager.emailIcon),
+          child: SvgPicture.asset(svgPrefix ?? AssetPathManager.emailIcon),
         ),
         fillColor: Colors.grey[200],
         hintText: hintText,

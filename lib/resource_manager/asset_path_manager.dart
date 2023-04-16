@@ -18,4 +18,5 @@ class AssetPathManager {
   static const String ropeJumping = "assets/images/human_rope_jumping.png";
   static const String humanRunning = "assets/images/human_running.png";
   static const String weightLifting = "assets/images/human_weight_lifting.png";
+  static const String profileIcon = "assets/svg/profile_icon.svg";
 }
