@@ -48,7 +48,7 @@ class SplashScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30.0,right: 30.0,bottom: 50.0),
                     child: CustomButton(text: "Get Started",textColor: ColorManager.primaryColor, onTap: () {
-                      Get.to(()=> const SliderScreen());
+                      Get.to(()=> const OnBoardingOne());
                     }),
                   ),
                 ),

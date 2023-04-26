@@ -39,71 +39,75 @@ class CompleteProfileScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Container(
-                    height: 400,
-                    margin: const EdgeInsets.only(top: 15, bottom: 15),
-                    child: CarouselSlider.builder(
-                      itemCount: controller.profileList.length,
-                      options: CarouselOptions(
-                        enlargeCenterPage: true,
-                        height: 300,
-                        autoPlay: false,
-                        autoPlayInterval: const Duration(seconds: 3),
-                        reverse: false,
-                        aspectRatio: 5.0,
-                      ),
-                      itemBuilder: (context, index, pageViewIndex) {
-                        //for onTap to redirect to another screen
-                        return Container(
-                          height: 450,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(
-                              color: Colors.white,
+                  Expanded(
+                    child: Container(
+                      height: 400,
+                      margin: const EdgeInsets.only(top: 15, bottom: 15),
+                      child: CarouselSlider.builder(
+                        itemCount: controller.profileList.length,
+                        options: CarouselOptions(
+                          enlargeCenterPage: true,
+                          height: 400,
+                          autoPlay: false,
+                          autoPlayInterval: const Duration(seconds: 3),
+                          reverse: false,
+                          aspectRatio: 5.0,
+                        ),
+                        itemBuilder: (context, index, pageViewIndex) {
+                          //for onTap to redirect to another screen
+                          return Container(
+                            height: 500,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.white,
+                              ),
+                              color: ColorManager.secondaryColor,
                             ),
-                            color: ColorManager.primaryColor,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  controller.profileList[index].iconPath,
-                                  scale: 2,
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text(controller.profileList[index].title),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Container(
-                                  height: 2,
-                                  width: 50,
-                                  color: Colors.white,
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    controller.profileList[index].iconPath,
+                                    height: 250,
+                                    width: 150,
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(controller.profileList[index].title,style: const TextStyle(color: Colors.white),),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Container(
+                                    height: 2,
+                                    width: 50,
+                                    color: Colors.white,
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
 
-                                Expanded(
+                                  Expanded(
                                     child: Text(
-                                        controller.profileList[index].details)),
-                              ],
+                                        controller.profileList[index].details,style: const TextStyle(color: Colors.white),textAlign: TextAlign.center,),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     ),
                   ),
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(
                       padding: const EdgeInsets.only(
-                          left: 30.0, right: 30.0, bottom: 50.0),
+                          left: 30.0, right: 30.0,top: 20, bottom: 50.0),
                       child: CustomGradientButton(
-                          text: "Go To Home",
+                          text: "Confirm",
                           textColor: Colors.white,
                           onTap: () {}),
                     ),

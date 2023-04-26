@@ -77,7 +77,7 @@ class NextScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       left: 30.0, right: 30.0, bottom: 50.0),
                   child: CustomGradientButton(
-                      text: "Go To Home",
+                      text: "Next >",
                       textColor: Colors.white,
                       onTap: () {
                         Get.to(const CompleteProfileScreen());
